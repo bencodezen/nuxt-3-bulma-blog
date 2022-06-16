@@ -1,36 +1,32 @@
-<script setup></script>
+<script setup>
+const isMobileNavOpen = ref(false)
+</script>
 
 <template>
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="../">
-          <img src="../images/bulma.png" alt="Logo" />
-        </a>
-        <span class="navbar-burger burger" data-target="navbarMenu">
+        <nuxt-link to="/" class="navbar-item has-text-weight-bold is-size-5">
+          Nuxt Content v2 + Bulma Blog
+        </nuxt-link>
+        <span
+          class="navbar-burger burger"
+          data-target="navbarMenu"
+          @click="isMobileNavOpen = !isMobileNavOpen"
+        >
           <span></span>
           <span></span>
           <span></span>
         </span>
       </div>
-      <div id="navbarMenu" class="navbar-menu">
+      <div
+        id="navbarMenu"
+        class="navbar-menu"
+        :class="isMobileNavOpen ? 'is-active' : ''"
+      >
         <div class="navbar-end">
           <a class="navbar-item is-active"> Home </a>
-          <a class="navbar-item"> Examples </a>
-          <a class="navbar-item"> Features </a>
-          <a class="navbar-item"> Team </a>
-          <a class="navbar-item"> Archives </a>
-          <a class="navbar-item"> Help </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> Account </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item"> Dashboard </a>
-              <a class="navbar-item"> Profile </a>
-              <a class="navbar-item"> Settings </a>
-              <hr class="navbar-divider" />
-              <div class="navbar-item">Logout</div>
-            </div>
-          </div>
+          <a class="navbar-item"> Blog </a>
         </div>
       </div>
     </div>
