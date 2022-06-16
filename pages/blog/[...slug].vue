@@ -4,10 +4,6 @@ const { path } = useRoute()
 const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
-
-const publishedDate = computed(() => {
-  return new Date(blogPost.value['published-date']).toDateString()
-})
 </script>
 
 <template>
@@ -16,20 +12,17 @@ const publishedDate = computed(() => {
       <template v-slot:default>{{ blogPost.title }}</template>
 
       <template v-slot:subtitle>
-        <div class="media">
-          <div class="media-content has-text-centered">
-            <div class="tags has-addons level-item are-medium">
-              <span class="tag is-rounded is-dark">{{ blogPost.author }}</span>
-              <span class="tag is-rounded">{{ publishedDate }}</span>
-            </div>
-          </div>
-        </div>
+        <BlogPostMeta
+          :author="blogPost.author"
+          :date="blogPost['published-date']"
+          color="dark"
+        />
       </template>
     </TheHero>
     <div class="container">
       <section class="articles">
         <div class="column is-8 is-offset-2">
-          <BlogPostCard :blogPost="{ title: 'test' }">
+          <BlogPostCard :blogPost="blogPost">
             <ContentDoc />
           </BlogPostCard>
         </div>

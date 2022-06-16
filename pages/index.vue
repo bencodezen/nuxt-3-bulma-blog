@@ -3,6 +3,6 @@
     <TheHero>
       Let's build a blog using <br />Nuxt 3, Nuxt Content v2, and Bulma!
     </TheHero>
-    <ArticleFeed />
+    <BlogPostList />
   </main>
 </template>
