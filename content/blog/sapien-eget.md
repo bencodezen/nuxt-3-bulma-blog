@@ -1,6 +1,7 @@
 ---
 title: "Sapien eget mi proin sed 🔱"
-published-date: 2022-02-17
+dates:
+  - published: 2022-02-17
 author: "@bencodezen"
 ---
 

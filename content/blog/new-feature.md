@@ -1,6 +1,7 @@
 ---
 title: Introducing a new feature for paid subscribers
-published-date: 2022-05-10
+dates:
+  published: 2022-05-10
 author: "@bencodezen"
 ---
 

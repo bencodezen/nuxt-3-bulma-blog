@@ -17,7 +17,7 @@ defineProps({
         </p>
         <BlogPostMeta
           :author="blogPost.author"
-          :date="blogPost['published-date']"
+          :date="blogPost.dates.published"
         />
       </div>
     </div>

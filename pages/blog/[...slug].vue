@@ -14,7 +14,7 @@ const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
       <template v-slot:subtitle>
         <BlogPostMeta
           :author="blogPost.author"
-          :date="blogPost['published-date']"
+          :date="blogPost.dates.published"
           color="dark"
         />
       </template>
