@@ -25,8 +25,6 @@ useHead({
 <template>
   <TheNavbar />
   <div>
-    <TheHero />
-    <ArticleFeed />
     <NuxtPage />
   </div>
 </template>
@@ -39,19 +37,22 @@ body {
   font-size: 14px;
   background: #f0f2f4;
 }
+
+a {
+  color: #3e8ed0;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2d628f;
+}
+
 .navbar.is-white {
   background: #f0f2f4;
 }
 .navbar-brand .brand-text {
   font-size: 1.11rem;
   font-weight: bold;
-}
-.hero-body {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/1200px-Plum_trees_Kitano_Tenmangu.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
 }
 .articles {
   margin: 5rem 0;
@@ -74,9 +75,6 @@ body {
 .media-center {
   display: block;
   margin-bottom: 1rem;
-}
-.media-content {
-  margin-top: 3rem;
 }
 .article,
 .promo-block {
