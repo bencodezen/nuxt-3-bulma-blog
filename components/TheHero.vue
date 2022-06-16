@@ -4,9 +4,10 @@
   <section class="hero is-info is-medium is-bold">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title is-size-2">
-          Let's build a blog using <br />Nuxt 3, Nuxt Content v2, and Bulma!
+        <h1 class="title is-size-1">
+          <slot />
         </h1>
+        <slot name="subtitle" />
       </div>
     </div>
   </section>

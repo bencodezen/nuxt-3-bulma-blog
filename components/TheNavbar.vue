@@ -25,8 +25,7 @@ const isMobileNavOpen = ref(false)
         :class="isMobileNavOpen ? 'is-active' : ''"
       >
         <div class="navbar-end">
-          <nuxt-link to="/" class="navbar-item is-active"> Home </nuxt-link>
-          <nuxt-link to="/blog" class="navbar-item"> Blog </nuxt-link>
+          <nuxt-link to="/" class="navbar-item"> Home </nuxt-link>
         </div>
       </div>
     </div>
