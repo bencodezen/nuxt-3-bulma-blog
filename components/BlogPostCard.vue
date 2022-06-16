@@ -13,7 +13,7 @@ defineProps({
     <div v-if="showMeta" class="media">
       <div class="media-content has-text-centered">
         <p class="title article-title has-text-weight-bold">
-          <NuxtLink :to="blogPost._path">{{ blogPost.title }}</NuxtLink>
+          <h3>{{ blogPost.title }}</h3>
         </p>
         <BlogPostMeta
           :author="blogPost.author"

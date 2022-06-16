@@ -13,9 +13,11 @@ const { data: blogPostList } = await useAsyncData('blogPosts', () => {
           :key="blogPost.title"
           class="card article"
         >
-          <BlogPostCard :blogPost="blogPost" :showMeta="true">
-            {{ blogPost.description }}
-          </BlogPostCard>
+          <NuxtLink :to="blogPost._path">
+            <BlogPostCard :blogPost="blogPost" :showMeta="true">
+              {{ blogPost.description }}
+            </BlogPostCard>
+          </NuxtLink>
         </div>
       </div>
     </section>
